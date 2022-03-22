@@ -172,7 +172,7 @@ public class DateUtil {
     public static String parseDateToStr(Date time, String timeFromat, final Date defaultValue){
         try{
             DateFormat dateFormat=new SimpleDateFormat(timeFromat);
-            return dateFormat.format(time);
+            return null;
         }catch (Exception e){
             if(defaultValue!=null)
                 return parseDateToStr(defaultValue, timeFromat);
