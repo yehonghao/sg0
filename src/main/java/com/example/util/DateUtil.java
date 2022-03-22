@@ -188,9 +188,10 @@ public class DateUtil {
      * @param defaultValue 默认时间值String类型
      * @return 格式化后的字符串
      */
-    public static String parseDateToStr1(Date time, String timeFromat, final String defaultValue){
+    public static String parseDateToStr(Date time, String timeFromat, final String defaultValue){
         try{
             DateFormat dateFormat=new SimpleDateFormat(timeFromat);
+            int i=0;
             return dateFormat.format(time);
         }catch (Exception e){
             return defaultValue;
