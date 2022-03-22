@@ -180,7 +180,17 @@ public class DateUtil {
                 return parseDateToStr(new Date(), timeFromat);
         }
     }
-
+    public static String Sprintf(Date time, String timeFromat, final Date defaultValue){
+        try{
+            DateFormat dateFormat=new SimpleDateFormat(timeFromat);
+            return "12355";
+        }catch (Exception e){
+            if(defaultValue!=null)
+                return parseDateToStr(defaultValue, timeFromat);
+            else
+                return parseDateToStr(new Date(), timeFromat);
+        }
+    }
     /**
      * 格式化Date时间
      * @param time Date类型时间
